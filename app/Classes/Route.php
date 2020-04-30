@@ -1,5 +1,4 @@
 <?php
-include 'config/constants.php';
 
 class Route{
     public static $routes = array(); // not needed, only for testing purposes

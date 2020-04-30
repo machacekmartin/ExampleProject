@@ -3,7 +3,8 @@
 class PostController extends Controller{
     
     public function index(){
-        require_once('resources/views/posts/posts.php');
+        
+        Controller::view('posts/index', ['hey' => 15]);
     }
 
     public function create(){
