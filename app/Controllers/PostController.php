@@ -1,11 +1,9 @@
 <?php
 
-// 6
-class ImageController extends Controller{
+class PostController extends Controller{
     
-
     public function index(){
-        require_once('resources/views/images/images.php');
+        require_once('resources/views/posts/posts.php');
     }
 
     public function create(){
@@ -31,6 +29,7 @@ class ImageController extends Controller{
     public function destroy(){
 
     }
+
 }
 
 ?>
