@@ -4,8 +4,7 @@
 class ImageController extends Controller{
     
     public function index(){
-        Database::query("SELECT * FROM images");
-        self::view('images/index', ['hey' => 15]);
+        return self::view('images/index', Image::all('images'));
     }
 
     public function create(){
@@ -16,8 +15,12 @@ class ImageController extends Controller{
 
     }
 
-    public function show(){
-
+    public function show($id){
+        $image = Image::row('images', $id);
+        if (empty($image)){
+            return self::view('fallbacks/404', null);
+        }
+        return self::view('images/show', $image);
     }
 
     public function edit(){

@@ -37,7 +37,7 @@ class Database {
     public static function query($sqlQuery){
         $query = self::connect()->prepare($sqlQuery);
         $query->execute();
-        $data = $query->fetch(PDO::FETCH_ASSOC);
+        $data = $query->fetchAll();
 
         return $data;
     }

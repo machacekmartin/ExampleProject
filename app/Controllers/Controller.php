@@ -6,9 +6,9 @@
  */
 class Controller{
 
-    
-    public function view($name, $data = []){
-        require_once('resources/views/'.$name.'.php');
+        
+    public function view($name, $data){
+        return require_once('resources/views/'.$name.'.php');
     }
 }
 
