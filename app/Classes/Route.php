@@ -6,6 +6,6 @@ class Route{
         self::$routes[] = $route;
         if($_GET['path'] == $route){
             $function->__invoke();
-        }   
+        }
     }
 }
