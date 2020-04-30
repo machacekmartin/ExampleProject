@@ -18,6 +18,7 @@ Route::get('images/destroy/{id}', 'ImageController::destroy');
 
 // Posts
 Route::get('posts', 'PostController::index');
+Route::post('posts', 'PostController::store');
 Route::get('posts/show/{id}', 'PostController::show');
 Route::get('posts/destroy/{id}', 'PostController::destroy');
 

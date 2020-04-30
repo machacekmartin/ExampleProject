@@ -19,7 +19,7 @@ class ImageController extends Controller{
 
     public function show($id){
         $image = Image::row('images', $id);
-        if (empty($images)){
+        if (empty($image)){
             return self::view('fallbacks/404', null);
         }  
         return self::view('images/show', $image);

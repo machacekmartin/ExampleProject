@@ -10,12 +10,16 @@ class PostController extends Controller{
 
     }
 
-    public function store(){
-
+    public function store($post){
+        $newPost = new Post($post['header'], $post['date'], $post['content']);
+        var_dump($newPost);
     }
 
     public function show($id){
         $post = Post::row('posts', $id);
+        if (empty($post)){
+            return self::view('fallbacks/404', null);
+        }  
         return self::view('posts/show', $post);
     }
 

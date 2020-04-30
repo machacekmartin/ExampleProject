@@ -17,6 +17,7 @@ function autoload($name){
     elseif(file_exists('app/Models/'.$name.'.php')){
         require_once 'app/Models/'.$name.'.php';
     }
+
 }
 
 /**

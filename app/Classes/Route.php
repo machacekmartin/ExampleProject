@@ -69,6 +69,14 @@ class Route{
         
     }
 
+    public static function post($route, $function){
+        echo "POST!!";
+
+        ## get data from $_POST thingy, validate it, and pass it
+        ## to calluserfunction as a parameter, after which the
+        ## controller will parse the post attributes and return a view
+    }
+
     /**
      * Creates fallback to 404 page if no routes were correct
      * 
