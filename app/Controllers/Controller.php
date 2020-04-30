@@ -6,9 +6,7 @@
  */
 class Controller{
     
-    public function view($name, $data){
-        if (empty($data)) return require_once('resources/views/fallbacks/404.php');
-        
+    public function view($name, $data){      
         return require_once('resources/views/'.$name.'.php');
     }
 }

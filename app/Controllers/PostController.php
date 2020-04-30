@@ -27,8 +27,9 @@ class PostController extends Controller{
 
     }
     
-    public function destroy(){
-
+    public function destroy($id){
+        Post::destroy('posts', $id);
+        return self::view('posts/index', Post::all('posts'));
     }
 }
 

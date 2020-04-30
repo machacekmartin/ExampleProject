@@ -1,5 +1,7 @@
 <?php 
 
-echo "<pre>", print_r($data) ,"</pre>";
+echo "<pre>", var_dump($data) ,"</pre>";
+
+
 
 ?>

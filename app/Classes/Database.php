@@ -38,7 +38,7 @@ class Database {
         try{
             $query = self::connect()->prepare($sqlQuery);
             $query->execute();
-            $data = $query->fetchAll(PDO::FETCH_CLASS);
+            $data = $query;
         }
         catch(PDOException $e){
             die($e->getMessage());
