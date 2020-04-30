@@ -3,8 +3,7 @@
 class PostController extends Controller{
     
     public function index(){
-
-        self::view('posts/index', ['hey' => 15]);
+        return self::view('posts/index', Post::all('posts'));
     }
 
     public function create(){
@@ -15,8 +14,9 @@ class PostController extends Controller{
 
     }
 
-    public function show(){
-
+    public function show($id){
+        $post = Post::row('posts', $id);
+        return self::view('posts/show', $post);
     }
 
     public function edit(){
@@ -30,7 +30,6 @@ class PostController extends Controller{
     public function destroy(){
 
     }
-
 }
 
 ?>

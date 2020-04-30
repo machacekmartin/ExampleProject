@@ -3,6 +3,6 @@
 
 <?php 
 $image = $data;
-echo "<pre>", var_dump($image) ,"</pre>";
+echo "<pre>", print_r($image) ,"</pre>";
 
 ?>

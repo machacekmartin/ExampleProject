@@ -3,12 +3,29 @@
 class Route{
     private static $match = false;
 
+    /**
+     * Checks if given route contains a given string
+     * 
+     * @param string $route     Current route that will be checked
+     * @param string $string    String the function is looking for
+     * 
+     * @return boolean
+     */
     private static function routeHasString($route, $string){
+
         if (strpos($route, $string)){
             return true;
         }
         return false;
     }
+
+    /**
+     * Fetches id from url, if it exists. If not, returns null
+     * 
+     * @param string $url   URL
+     * 
+     * @return boolean
+     */
     private static function getIdFromUrl($url){
         $regex = '/[a-z]+\/[a-z]+\/([1-9]{1}[0-9]*)$/';
 
@@ -18,7 +35,6 @@ class Route{
         return null;
         
     }
-
 
     /**
      * Calls function stored in $function (usually as controller::functionName) 
@@ -36,10 +52,10 @@ class Route{
             $id = self::getIdFromUrl($_GET['path']);
 
             if ($id != null){
-                $trimedPath = rtrim($_GET['path'], $id);
-                $trimedRoute = rtrim($route, '{id}');
+                $trimmedPath = rtrim($_GET['path'], $id);
+                $trimmedRoute = rtrim($route, '{id}');
 
-                if ($trimedPath == $trimedRoute){ 
+                if ($trimmedPath == $trimmedRoute){ 
                     self::$match = true;
                     call_user_func($function, $id);
                 }
@@ -59,6 +75,7 @@ class Route{
      * @param string $function  Function mame
      */
     public static function fallback($function){
+
         if (!self::$match){
             self::$match = false;
             call_user_func($function, '404');

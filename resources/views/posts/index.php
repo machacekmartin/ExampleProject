@@ -1,5 +1,5 @@
 <?php 
 
-print_r($data);
+echo "<pre>", print_r($data) ,"</pre>";
 
 ?>

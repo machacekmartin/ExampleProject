@@ -35,9 +35,14 @@ class Database {
      * @return array $data  Array of data provided by the database as a response to the query.
      */
     public static function query($sqlQuery){
-        $query = self::connect()->prepare($sqlQuery);
-        $query->execute();
-        $data = $query->fetchAll();
+        try{
+            $query = self::connect()->prepare($sqlQuery);
+            $query->execute();
+            $data = $query->fetchAll(PDO::FETCH_CLASS);
+        }
+        catch(PDOException $e){
+            die($e->getMessage());
+        }
 
         return $data;
     }
