@@ -3,9 +3,9 @@
 // 6
 class ImageController extends Controller{
     
-
     public function index(){
-        require_once('resources/views/images/images.php');
+        Database::query("SELECT * FROM images");
+        self::view('images/index', ['hey' => 15]);
     }
 
     public function create(){

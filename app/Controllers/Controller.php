@@ -6,6 +6,7 @@
  */
 class Controller{
 
+    
     public function view($name, $data = []){
         require_once('resources/views/'.$name.'.php');
     }

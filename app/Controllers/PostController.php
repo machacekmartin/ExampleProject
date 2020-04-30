@@ -3,8 +3,8 @@
 class PostController extends Controller{
     
     public function index(){
-        
-        Controller::view('posts/index', ['hey' => 15]);
+
+        self::view('posts/index', ['hey' => 15]);
     }
 
     public function create(){
