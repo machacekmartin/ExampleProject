@@ -8,6 +8,8 @@ require_once('app/Routes/Routes.php');
 ?>
 
 
+
+
 <?php 
 require_once('resources/components/footer/footer.php');
 ?>

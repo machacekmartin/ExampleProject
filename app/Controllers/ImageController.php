@@ -12,11 +12,16 @@ class ImageController extends Controller{
     }
 
     public function store($image){
+        $fileHandler = new FileHandler();
+        $filename = $fileHandler->upload($_FILES['image']);
+
+        if ($filename == null) die("<br>No image found");
+
         Image::insert((object)[
             'header' => $image['header'],
-            'src' => $image['src']
+            'filename' => $filename
         ]);
-        return self::view('images/create');
+        return self::redirect('images');
     }
 
     public function show($id){
@@ -37,8 +42,15 @@ class ImageController extends Controller{
     }
     
     public function destroy($id){
+        $fileHandler = new FileHandler();
+        $filename = Image::cell('images', $id, 'filename');
+        if (empty($filename)){
+            return self::view('fallbacks/404');
+        }
+        $fileHandler->delete($filename);
         Image::destroy('images', $id);
-        return self::view('images');
+    
+        return self::redirect('images');
     }
 }
 

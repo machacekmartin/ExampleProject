@@ -2,7 +2,7 @@
 
     <input type="text" name="header" placeholder="header">
     <br>
-    <input type="file" name="src" placeholder="src">
+    <input type="file" name="image">
     <br>
     <input type="hidden" name="action" value="images">
     <br>
