@@ -5,6 +5,17 @@ class FileHandler{
     private $valid = array('.jpg', '.jpeg', '.png');
     private $folder = 'resources/images/';
 
+    /**
+     * Uploads file to a folder given in class attribute $folder
+     * First, checks if the file has valid format (extension), then
+     * adds a date to the filename to avoid duplicates/overwriting.
+     * Finally, uses move_uploaded_file to upload the file.
+     * 
+     * @param object $file  Object taken from available $_FILES 
+     * 
+     * @return string $name Final name of the uploaded file
+     * @return null         Ff something went wrong
+     */
     public function upload($file){
         $ext = strrchr($file['name'], '.');
         if (in_array($ext, $this->valid)){
@@ -14,15 +25,20 @@ class FileHandler{
                 return $name;
             }
             else{
-                echo "SOMETHINGS WRONG IDIOT";
+                echo "For some reason, the file could not be uploaded..";
             }
         }
         else{
-            
+            echo "<br>Invalid extension<br>";
         }
-        return null;
     }
 
+    /**
+     * Deletes file by given name 
+     * Uses class attribute folder, to determine right path
+     * 
+     * @param string $filename  Name of the file (full, with extension)
+     */
     public function delete($filename){
         unlink($this->folder.'/'.$filename);
     }

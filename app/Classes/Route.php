@@ -31,9 +31,7 @@ class Route{
 
         if (preg_match($regex, $url, $match)){
             return $match[1];
-        }
-        return null;
-        
+        }        
     }
 
     /**
@@ -70,6 +68,16 @@ class Route{
         
     }
 
+    /**
+     * Is used to call function when requested via POST method.
+     * Sets $match to true to disable unwanted fallback during routing.
+     * The current route is not taken from url, but from an input 
+     * inside form that invoked this function (hidden input, name=action).
+     * Provides call_user_func with $_POST as a parameter
+     * 
+     * @param string $route     Route that will be checked (given by html form input name 'action')
+     * @param string $function  Function mame
+     */
     public static function post($route, $function){
 
         if (!empty($_POST) && $_POST['action'] == $route){
@@ -77,11 +85,6 @@ class Route{
             self::$match = true;
             call_user_func($function, $_POST);
         }
-        
-
-        ## get data from $_POST thingy, validate it, and pass it
-        ## to calluserfunction as a parameter, after which the
-        ## controller will parse the post attributes and return a view
     }
 
     /**

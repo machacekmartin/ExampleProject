@@ -15,7 +15,7 @@ class ImageController extends Controller{
         $fileHandler = new FileHandler();
         $filename = $fileHandler->upload($_FILES['image']);
 
-        if ($filename == null) die("<br>No image found");
+        if ($filename == null) die("<br>Command terminated.<br>");
 
         Image::insert((object)[
             'header' => $image['header'],
