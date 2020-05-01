@@ -7,12 +7,18 @@ class PostController extends Controller{
     }
 
     public function create(){
-
+        return self::view('posts/create', Post::all('posts'));
     }
 
     public function store($post){
-        $newPost = new Post($post['header'], $post['date'], $post['content']);
-        var_dump($newPost);
+        $newPost = new Post();
+        $newPost->header = $post['header'];
+        $newPost->content = $post['content'];
+
+        Post::insert($newPost);
+
+        self::redirect('posts');
+        return self::view('posts/index', Post::all('posts'));
     }
 
     public function show($id){
@@ -33,6 +39,8 @@ class PostController extends Controller{
     
     public function destroy($id){
         Post::destroy('posts', $id);
+        
+        self::redirect('posts');
         return self::view('posts/index', Post::all('posts'));
     }
 }

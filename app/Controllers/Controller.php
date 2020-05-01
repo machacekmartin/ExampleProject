@@ -9,6 +9,11 @@ class Controller{
     public function view($name, $data){      
         return require_once('resources/views/'.$name.'.php');
     }
+
+    public function redirect($url){
+        header('Location: /ExampleProject/'. $url);
+        die();
+    }
 }
 
 ?>

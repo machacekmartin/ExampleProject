@@ -1,4 +1,6 @@
 <?php
+
+
 require_once('resources/components/header/header.php');
 
 require_once('app/Autoloader.php');

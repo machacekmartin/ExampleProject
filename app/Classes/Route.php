@@ -47,7 +47,9 @@ class Route{
      * @param string $function  Function mame
      */
     public static function get($route, $function){
-
+        if (!empty($_POST)){
+            return;
+        }
         if (self::routeHasString($route, '{id}')){
             $id = self::getIdFromUrl($_GET['path']);
 
@@ -61,7 +63,6 @@ class Route{
                 }
             }
         }
-
         elseif($_GET['path'] == $route){
             self::$match = true;
             call_user_func($function);
@@ -70,7 +71,12 @@ class Route{
     }
 
     public static function post($route, $function){
-        echo "POST!!";
+        if (!empty($_POST) && $_POST['action'] == $route){
+            print($route);
+            self::$match = true;
+            call_user_func($function, $_POST);
+        }
+        
 
         ## get data from $_POST thingy, validate it, and pass it
         ## to calluserfunction as a parameter, after which the
