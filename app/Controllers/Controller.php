@@ -6,7 +6,7 @@
  */
 class Controller{
     
-    public function view($name, $data){      
+    public function view($name, $data = []){   
         return require_once('resources/views/'.$name.'.php');
     }
 
@@ -14,6 +14,7 @@ class Controller{
         header('Location: /ExampleProject/'. $url);
         die();
     }
+
 }
 
 ?>

@@ -71,6 +71,7 @@ class Route{
     }
 
     public static function post($route, $function){
+
         if (!empty($_POST) && $_POST['action'] == $route){
             print($route);
             self::$match = true;
@@ -89,7 +90,6 @@ class Route{
      * @param string $function  Function mame
      */
     public static function fallback($function){
-
         if (!self::$match){
             self::$match = false;
             call_user_func($function, '404');

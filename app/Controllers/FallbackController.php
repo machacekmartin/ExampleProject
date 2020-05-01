@@ -1,7 +1,7 @@
 <?php 
 
 class FallbackController extends Controller{
-    public function index($code){
-        require_once('resources/views/fallbacks/'.$code.'.php');
+    public function error($code){
+        return self::view('fallbacks/404');
     }
 }

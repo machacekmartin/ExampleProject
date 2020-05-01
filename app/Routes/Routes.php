@@ -26,6 +26,6 @@ Route::get('posts/show/{id}', 'PostController::show');
 Route::get('posts/destroy/{id}', 'PostController::destroy');
 
 
-Route::fallback('FallbackController::index');
+Route::fallback('FallbackController::error');
 
 ?>
