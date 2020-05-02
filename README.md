@@ -7,7 +7,7 @@
 ### Setup
 1. Start local Apache and MySQL (f.e xampp)
 2. import file [preparelocaldb.sql](https://github.com/machacekmartin/ExampleProject) into your phpmyadmin
-3. Open [localhost](127.0.0.1) in browser
+3. Open localhost in your browser
 
 #### Todo
 1. Authentication + users
