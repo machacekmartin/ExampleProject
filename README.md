@@ -7,8 +7,9 @@
 ### Setup
 0. Put contents of this project inside your htdocs folder of xampp
 1. Start local Apache and MySQL
-2. import [preparelocaldb.sql](https://github.com/machacekmartin/ExampleProject/blob/master/preparelocaldb.sql) into your database (f.e using phpmyadmin)
-3. Open localhost in your browser
+3. Credentials of your database have to be same as in [this file](https://github.com/machacekmartin/ExampleProject/blob/master/config/database.php) 
+4. import [preparelocaldb.sql](https://github.com/machacekmartin/ExampleProject/blob/master/preparelocaldb.sql) into your database (f.e using phpmyadmin)
+5. Open localhost in your browser
 
 #### Todo
 1. Authentication + users
