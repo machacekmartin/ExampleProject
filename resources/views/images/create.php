@@ -9,4 +9,4 @@
     <input type="submit" value="Create new image">
 </form>
 
-<a href="/ExampleProject/images">Back</a>
+<a href="/images">Back</a>
