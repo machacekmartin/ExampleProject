@@ -5,7 +5,8 @@
 - Basic routing is very similiar to what Laravel offers, but ofc way more stripped down
 
 ### Setup
-1. Start local Apache and MySQL (f.e xampp)
+0. Put contents of this project inside your htdocs folder of xampp
+1. Start local Apache and MySQL
 2. import [preparelocaldb.sql](https://github.com/machacekmartin/ExampleProject/blob/master/preparelocaldb.sql) into your database (f.e using phpmyadmin)
 3. Open localhost in your browser
 
