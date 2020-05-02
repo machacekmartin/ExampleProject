@@ -1,9 +1,165 @@
+$dark-gray: #333333;
+$bright-gray: #FEFEFE;
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+ul{
+    list-style-type: none;
+}
+a{
+    text-decoration: none;
+    color: inherit;
+}
+.flex{
+    display: flex;
+}
+.row{
+    flex-flow: row;
+}
+.column{
+    flex-flow: column;
+}
+
+
 body{
-    background: yellow !important;
-    h1{
-        font-size: 150px;
+    background: $bright-gray;
+    color: $dark-gray;
+}
+#menu{
+    width: 100%;
+    max-width: 2160px;
+    margin: 0 auto;
+    background: $bright-gray;
+    padding: 30px 100px;
+    justify-content: space-between;
+    align-items: center;
+
+    .items{
+        .item{
+            margin: 0 30px;
+            .link{
+                border-bottom: solid 1px transparent;
+                padding: 2px 0;
+                transition: border-color .1s;
+            }
+            :hover{
+                border-color: $dark-gray;
+            }
+        }
     }
-    h2{
-        margin-top: 50px;
+}
+
+#content{
+    margin-top: 100px;
+    padding: 30px 100px;
+    max-width: 2160px;
+    margin: 0 auto;
+    .heading{
+        text-align: center;
+        font-size: 35px;
+        margin-bottom: 35px;
+    }
+    .upload{
+        position: absolute;
+        margin-top: 15px;
+    }
+    .images{
+        flex-wrap: wrap;
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+        column-gap: 10px;
+        row-gap: 10px;
+        .image-block{
+            position: relative;
+            height: 300px;
+            color: $bright-gray;
+            .info{
+                position: absolute;
+                padding: 20px;
+                height: 100%;
+                width: 100%;
+                opacity: 0;
+                background: rgba(0,0,0,0.7);
+                transition: opacity 0.1s;
+                justify-content: flex-end; 
+            }
+            :hover{
+                opacity: 1;
+            }
+            .delete{
+                position: absolute;
+                padding: 5px 10px;
+                right: 0;
+                background: $dark-gray;
+                z-index: 1;
+            }
+            .image{
+                width: 100%;
+                height: 100%;
+                object-fit: cover;
+
+            }
+        }
+    }
+}
+
+#footer{
+
+}
+
+
+///////////////  RESPONSIVE STUFF  \\\\\\\\\\\\\\\
+
+@media only screen and(max-width: 2160px){
+    #menu, #content{
+        padding: 30px 50px;
+    }
+    #content{
+        .images{
+            grid-template-columns: 1fr 1fr 1fr 1fr;
+        }
+    }
+}
+@media only screen and(max-width: 1530px){
+    #content{
+        .images{
+            grid-template-columns: 1fr 1fr 1fr;
+        }
+    }
+}
+@media only screen and(max-width: 1120px){
+    #menu, #content{
+        padding: 30px 30px;
+    }
+    #content{
+        .images{
+            grid-template-columns: 1fr 1fr;
+        }
+    }
+}
+@media only screen and(max-width: 800px){
+    #menu, #content{
+        padding: 30px 20px;
+    }
+    #content{
+        .images{
+            grid-template-columns: 1fr 1fr;
+            .image-block{
+                height: 200px;
+            }
+        }
+    }
+}
+@media only screen and(max-width: 500px){
+    #menu, #content{
+        padding: 30px 10px;
+    }
+    #content{
+        .images{
+            grid-template-columns: 1fr;
+        }
     }
 }
