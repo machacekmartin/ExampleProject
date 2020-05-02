@@ -1,14 +1,10 @@
-# ExampleProject
+# Example Project
 
-Example web app, that allows everyone to publish some posts and images (divided)
+- Example web app, that allows everyone to publish some posts and images (divided)
+- Basic routing is very similiar to what Laravel offers, but ofc way more stripped down
 
-
-
-Doesnt have any authentication. YET
-
-Cross-site scripting and js/html injection not taken care of. YET
-
-
-Structure is based on MVP, even though I used naming scheme for MVC lol
-
-Basic routing is very similiar to what Laravel has to offer.. only Route::get, Route::post, nothing special.
+#### Todo
+1. Authentication + users
+2. Cross-site scripting and js/html injection
+3. UI
+4. Final refactor
