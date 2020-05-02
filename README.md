@@ -3,7 +3,7 @@
 - Example web app, that allows publishing of posts and images (separate)
 - ONLY FOR DEMONSTRATION PURPOSES - thus only meant to be used on a localhost setup
 - Basic routing is very similiar to what Laravel offers, but ofc way more stripped down
-- Uses [scssphp](https://scssphp.github.io/scssphp/) for compiling sass into css
+- Uses [scssphp](https://scssphp.github.io/scssphp/) for compiling .scss into .css
 
 ### Setup
 0. Put contents of this project inside your htdocs folder of xampp
