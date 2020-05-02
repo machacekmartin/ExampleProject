@@ -27,7 +27,7 @@ class Controller{
      * @param string $url   desired URL.. duh
      */
     public function redirect($url){
-        header('Location: /ExampleProject/'. $url);
+        header('Location: /'. $url);
         die(); //temporary
     }
 

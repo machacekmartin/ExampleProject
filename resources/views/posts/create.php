@@ -8,4 +8,4 @@
     <input type="submit" value="Create new post">
 </form>
 
-<a href="/ExampleProject/posts">Back</a>
+<a href="/posts">Back</a>
