@@ -6,7 +6,7 @@
 
 ### Setup
 1. Start local Apache and MySQL (f.e xampp)
-2. import file [preparelocaldb.sql](https://github.com/machacekmartin/ExampleProject) into your phpmyadmin
+2. import [preparelocaldb.sql](https://github.com/machacekmartin/ExampleProject/blob/master/preparelocaldb.sql) into your database (f.e using phpmyadmin)
 3. Open localhost in your browser
 
 #### Todo
