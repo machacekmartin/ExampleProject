@@ -9,4 +9,4 @@ Cross-site scripting and js/html injection not taken care of. YET
 
 Structure is based on MVP, even though I used naming scheme for MVC lol
 
-Basic routing is very similiar to what Laravel has to offer (Route::get, Route::post)
+Basic routing is very similiar to what Laravel has to offer.. only Route::get, Route::post, nothing special.
