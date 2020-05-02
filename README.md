@@ -2,6 +2,8 @@
 
 Example web app, that allows everyone to publish some posts and images (divided)
 
+
+
 Doesnt have any authentication. YET
 
 Cross-site scripting and js/html injection not taken care of. YET
