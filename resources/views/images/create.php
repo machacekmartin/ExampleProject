@@ -6,7 +6,7 @@
     <br>
     <input type="hidden" name="action" value="images">
     <br>
-    <input type="submit" value="Create new post">
+    <input type="submit" value="Create new image">
 </form>
 
 <a href="/ExampleProject/images">Back</a>
