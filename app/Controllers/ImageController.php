@@ -1,6 +1,5 @@
 <?php
 
-// 6
 class ImageController extends Controller{
     
     public function index(){
@@ -8,6 +7,7 @@ class ImageController extends Controller{
     }
 
     public function create(){
+
         return self::view('images/create');
     }
 

@@ -17,9 +17,6 @@ function autoload($name){
     elseif(file_exists('app/Models/'.$name.'.php')){
         require_once 'app/Models/'.$name.'.php';
     }
-    elseif(file_exists('scssphp/'.$name.'.php')){
-        require_once 'scssphp/'.$name.'.php';
-    }
 }
 
 /**
