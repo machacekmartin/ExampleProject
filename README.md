@@ -2,7 +2,7 @@
 
 - Example web app, that allows publishing of posts and images (separate)
 - ONLY FOR DEMONSTRATION PURPOSES - thus only meant to be used on a localhost setup
-- Uses variation of MVC, where the view doesnt communicate directly with model, but everything is provided via Controllers.
+- Uses variation of MVC, where the View doesnt communicate directly with Model, but everything is provided via Controllers.
 
 ## Code flow
 1. View wants something (e.g. get/post request)
