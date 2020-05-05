@@ -26,12 +26,12 @@
                 <a href="/images" class="link">Images</a>
             </li>
             <li class="item">
-                <a href="" class="link">Account</a>
+                <a href="" class="link"><s>Account</s></a>
             </li>
         </ul>
         <div class="right flex row">
             <div class="login">
-                <a href="">Login</a> 
+                <a href=""><s>Login</s></a> 
             </div>
             <span class="switch">M</span>
         </div>

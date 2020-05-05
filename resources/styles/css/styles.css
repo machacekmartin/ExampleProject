@@ -18,7 +18,6 @@
   src: url('/resources/fonts/Signika/Signika-Bold.ttf') format("truetype");
   font-weight: 700;
   font-style: normal; }
-
 * {
   margin: 0;
   padding: 0;
@@ -54,7 +53,7 @@ textarea {
 input.button {
   padding: 12px 50px;
   height: 100%;
-  border: solid 2px #ccc;
+  border: solid 2px #CCCCCC;
   background: none;
   cursor: pointer;
   transition: 0.15s;
@@ -63,7 +62,7 @@ input.button {
   letter-spacing: 0.5px; }
   input.button:hover {
     background: #333333;
-    color: #EEE;
+    color: #EEEEEE;
     border-color: transparent; }
 
 .input-text {
@@ -75,9 +74,8 @@ input.button {
   border-left: solid 0px #333333;
   transition: border 0.15s;
   margin-bottom: 20px; }
-
-.input-text:focus {
-  border-left-width: 5px; }
+  .input-text:focus {
+    border-left-width: 5px; }
 
 .flex {
   display: flex; }
@@ -87,7 +85,6 @@ input.button {
 
 .column {
   flex-flow: column; }
-
 body {
   background: #FEFEFE;
   color: #333333;
@@ -171,7 +168,7 @@ body {
     #content .image-form .image {
       width: 100%;
       height: 250px;
-      border: solid 2px #ccc;
+      border: solid 2px #CCCCCC;
       position: relative;
       background: url('/resources/images/static/add.png');
       background-size: contain;
@@ -202,7 +199,7 @@ body {
     column-gap: 10px;
     row-gap: 10px; }
     #content .posts .post {
-      border: solid 1px #ccc;
+      border: solid 1px #CCCCCC;
       padding: 10px;
       word-break: break-all; }
   #content .post-form {
@@ -225,8 +222,8 @@ body {
         word-break: break-all;
         line-height: 25px; }
       #content .image-page .header .date {
-        font-weight: 300;
-        color: #ccc;
+        font-weight: 100;
+        color: #333333;
         font-size: 20px;
         text-align: right;
         margin: 5px 0; }
@@ -239,7 +236,7 @@ body {
   height: 50px;
   width: 100%;
   background: #333333;
-  color: #EEE;
+  color: #EEEEEE;
   margin-top: 50px;
   text-align: center; }
 

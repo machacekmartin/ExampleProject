@@ -1,110 +1,4 @@
-$dark-gray: #333333;
-$bright-gray: #FEFEFE;
-$light-gray: #EEE;
-$gray: #ccc;
-
-/////////////// FONTS \\\\\\\\\\\\\\\
-
-@font-face {
-    font-family: 'Signika';
-    src: url('/resources/fonts/Signika/Signika-Light.ttf') format("truetype");
-    font-weight: 100;
-    font-style: normal;
-}
-@font-face {
-    font-family: 'Signika';
-    src: url('/resources/fonts/Signika/Signika-Regular.ttf') format("truetype");
-    font-weight: 400;
-    font-style: normal;
-}
-@font-face {
-    font-family: 'Signika';
-    src: url('/resources/fonts/Signika/Signika-SemiBold.ttf') format("truetype");
-    font-weight: 500;
-    font-style: normal;
-}
-@font-face {
-    font-family: 'Signika';
-    src: url('/resources/fonts/Signika/Signika-Bold.ttf') format("truetype");
-    font-weight: 700;
-    font-style: normal;
-}
-/////////////// PRESETS \\\\\\\\\\\\\\\
-
-*{
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
-ul{
-    list-style-type: none;
-}
-a{
-    text-decoration: none;
-    color: inherit;
-}
-button, textarea, input, select, a{
-    -webkit-tap-highlight-color: transparent;
-    -webkit-appearance: none;
-}
-img{
-    display: none;
-}
-img[src]{
-   display: block;
-}
-input, textarea{
-    border-radius: 0;
-    outline: none;
-    border: none;
-    font-family: 'Signika';
-}
-textarea{
-    font-weight: 100;
-    max-width: 600px;
-}
-input.button{
-    padding: 12px 50px;
-    height: 100%;
-    border: solid 2px $gray;
-    background: none;
-    cursor: pointer;
-    transition: 0.15s;
-    font-weight: 500;
-    font-size: 16px;
-    letter-spacing: .5px;
-    &:hover{
-        background: $dark-gray;
-        color: $light-gray;
-        border-color: transparent;
-    }
-}
-.input-text{
-    padding: 10px;
-    max-width: 600px;
-    width: 100%;
-    font-size: 20px;
-    background: #eee;
-    border-left: solid 0px $dark-gray;
-    transition: border .15s;
-    margin-bottom: 20px; 
-}
-.input-text:focus{
-    border-left-width: 5px;
-}
-
-.flex{
-    display: flex;
-}
-.row{
-    flex-flow: row;
-}
-.column{
-    flex-flow: column;
-}
-
 /////////////// LAYOUT \\\\\\\\\\\\\\\
-
 body{
     background: $bright-gray;
     color: $dark-gray;
@@ -271,8 +165,8 @@ body{
                 line-height: 25px;
             }
             .date{
-                font-weight: 300;
-                color: $gray;
+                font-weight: 100;
+                color: $dark-gray;
                 font-size: 20px;
                 text-align: right;
                 margin: 5px 0;
