@@ -10,7 +10,7 @@ class Controller{
      * Provides controllers the power of generating view and passing data
      * into that view. 
      * 
-     * @param string $name  folder + name of the file (no extension). f.e - images/index
+     * @param string $name  folder + name of the file (no extension). e.g. - images/index
      * @param array $data   Data that will be passed into the view
      */
     public function view($name, $data = []){   
@@ -20,7 +20,7 @@ class Controller{
     /**
      * Redirects current page onto another.
      * If you are asking yourself.. hey, why does this even exist?
-     * Well, when you want to use f.e destroy() of PostController, it needs to redirect somewhere, 
+     * Well, when you want to use e.g. destroy() of PostController, it needs to redirect somewhere, 
      * so if you wanted to redirect to page 'images' using view(), you would use the exact same command, as in function index()..
      * we dont want that.. + it wouldnt get rid of POST requests
      * 
