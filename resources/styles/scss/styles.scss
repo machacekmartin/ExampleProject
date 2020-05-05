@@ -1,5 +1,35 @@
 $dark-gray: #333333;
 $bright-gray: #FEFEFE;
+$light-gray: #EEE;
+$gray: #ccc;
+
+/////////////// FONTS \\\\\\\\\\\\\\\
+
+@font-face {
+    font-family: 'Signika';
+    src: url('/resources/fonts/Signika/Signika-Light.ttf') format("truetype");
+    font-weight: 100;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'Signika';
+    src: url('/resources/fonts/Signika/Signika-Regular.ttf') format("truetype");
+    font-weight: 400;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'Signika';
+    src: url('/resources/fonts/Signika/Signika-SemiBold.ttf') format("truetype");
+    font-weight: 500;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'Signika';
+    src: url('/resources/fonts/Signika/Signika-Bold.ttf') format("truetype");
+    font-weight: 700;
+    font-style: normal;
+}
+/////////////// PRESETS \\\\\\\\\\\\\\\
 
 *{
     margin: 0;
@@ -13,6 +43,56 @@ a{
     text-decoration: none;
     color: inherit;
 }
+button, textarea, input, select, a{
+    -webkit-tap-highlight-color: transparent;
+    -webkit-appearance: none;
+}
+img{
+    display: none;
+}
+img[src]{
+   display: block;
+}
+input, textarea{
+    border-radius: 0;
+    outline: none;
+    border: none;
+    font-family: 'Signika';
+}
+textarea{
+    font-weight: 100;
+    max-width: 600px;
+}
+input.button{
+    padding: 12px 50px;
+    height: 100%;
+    border: solid 2px $gray;
+    background: none;
+    cursor: pointer;
+    transition: 0.15s;
+    font-weight: 500;
+    font-size: 16px;
+    letter-spacing: .5px;
+    &:hover{
+        background: $dark-gray;
+        color: $light-gray;
+        border-color: transparent;
+    }
+}
+.input-text{
+    padding: 10px;
+    max-width: 600px;
+    width: 100%;
+    font-size: 20px;
+    background: #eee;
+    border-left: solid 0px $dark-gray;
+    transition: border .15s;
+    margin-bottom: 20px; 
+}
+.input-text:focus{
+    border-left-width: 5px;
+}
+
 .flex{
     display: flex;
 }
@@ -23,10 +103,13 @@ a{
     flex-flow: column;
 }
 
+/////////////// LAYOUT \\\\\\\\\\\\\\\
 
 body{
     background: $bright-gray;
     color: $dark-gray;
+    position: relative;
+    font-family: 'Signika';
 }
 #menu{
     width: 100%;
@@ -36,19 +119,30 @@ body{
     padding: 30px 100px;
     justify-content: space-between;
     align-items: center;
-
+    .login{
+        text-align:right;
+        width: 50px;
+    }
     .items{
         .item{
             margin: 0 30px;
+            font-weight: 600;
+            font-size: 14px;
+            letter-spacing: 1px;
             .link{
+                text-transform: uppercase;
+
                 border-bottom: solid 1px transparent;
                 padding: 2px 0;
                 transition: border-color .1s;
-            }
-            :hover{
-                border-color: $dark-gray;
+                &:hover{
+                    border-color: $dark-gray;
+                }
             }
         }
+    }
+    .switch{
+        display: none;
     }
 }
 
@@ -57,6 +151,7 @@ body{
     padding: 30px 100px;
     max-width: 2160px;
     margin: 0 auto;
+    min-height: calc(100vh - 128px);
     .heading{
         text-align: center;
         font-size: 35px;
@@ -85,9 +180,9 @@ body{
                 background: rgba(0,0,0,0.7);
                 transition: opacity 0.1s;
                 justify-content: flex-end; 
-            }
-            :hover{
-                opacity: 1;
+                &:hover{
+                    opacity: 1;
+                }
             }
             .delete{
                 position: absolute;
@@ -100,16 +195,104 @@ body{
                 width: 100%;
                 height: 100%;
                 object-fit: cover;
-
             }
         }
     }
-}
+    .image-form{
+        margin: 0 auto;
+        width: 100%;
+        max-width: 600px;
+        .image{
+            width: 100%;
+            height: 250px;
+            border: solid 2px $gray;
+            position: relative;
+            background: url('/resources/images/static/add.png');
+            background-size: contain;
+            background-position: center;
+            background-repeat: no-repeat;
+            transition: 0.15s;
+            &:hover{
+                border: solid 5px $dark-gray;
+            }
+            .file{
+                width: 100%;
+                height: 100%;
+                opacity: 0;
+                cursor: pointer;
+            }
+        }
+        .result{
+            width: 100%;
+            margin-top: 20px;
+            justify-content: space-between;
+            .preview{
+                width: 150px;
+                height: 150px;
+                object-fit: cover;
+            }
+        }
+    }
 
+    .posts{
+        max-width: 1200px;
+        margin: 0 auto;
+        width: 100%;
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        column-gap: 10px;
+        row-gap: 10px;
+        .post{
+            border: solid 1px $gray;
+            padding: 10px;
+            word-break: break-all;
+        }
+    }
+    .post-form{
+        max-width: 600px;
+        width: 100%;
+        margin: 0 auto;
+    }
+
+    .image-page{
+        max-width: 1000px;
+        width: 100%;
+        justify-content: center;
+        margin: 0 auto;
+        .header{
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 5px;
+            flex-wrap: wrap;
+            .title{
+                font-size: 30px;
+                font-weight: 600;
+                word-break:break-all;
+                line-height: 25px;
+            }
+            .date{
+                font-weight: 300;
+                color: $gray;
+                font-size: 20px;
+                text-align: right;
+                margin: 5px 0;
+            }
+        }
+        .image{
+            width: 100%;
+            margin: 0 auto;
+        }
+    }
+}
 #footer{
-
+    bottom: 0;  
+    height: 50px;
+    width: 100%;
+    background: $dark-gray;
+    color: $light-gray;
+    margin-top: 50px;
+    text-align: center;
 }
-
 
 ///////////////  RESPONSIVE STUFF  \\\\\\\\\\\\\\\
 
@@ -141,6 +324,38 @@ body{
     }
 }
 @media only screen and(max-width: 800px){
+    #menu{
+        .switch{
+            display: block;
+            margin-left: 25px;
+            padding-left: 25px;
+        }
+        .items{
+            position: fixed;
+            width: 0;
+            right: 0;
+            top: 78px;
+            height: calc(100% - 78px);
+            flex-flow: column;
+            align-items: center;
+            justify-content: center;
+            background: $bright-gray;
+            transition: .5s;
+            overflow: hidden;
+            z-index: 10;
+            padding-bottom: 150px;
+            opacity: 0;
+            .item{
+                margin: 20px 0;
+                font-size: 20px;
+            }
+            &.active{
+                opacity: 1;
+                width: 100%;
+            }
+        }
+    }
+    
     #menu, #content{
         padding: 30px 20px;
     }
@@ -151,12 +366,12 @@ body{
                 height: 200px;
             }
         }
+        .posts{
+            grid-template-columns: 1fr;
+        }
     }
 }
 @media only screen and(max-width: 500px){
-    #menu, #content{
-        padding: 30px 10px;
-    }
     #content{
         .images{
             grid-template-columns: 1fr;

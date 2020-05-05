@@ -8,11 +8,8 @@
             <p class="date"><?= $image->date ?></p>
             <p class="header"><?= $image->header ?></p>
          </a>
-        <img class="image" src="/resources/images/<?= $image->filename ?>">
-        
+        <img class="image" src="<?= IMAGES . $image->filename ?>">
     </div>
 <?php } ?>
-
-
 </div>
 
