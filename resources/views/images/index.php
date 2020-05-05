@@ -1,5 +1,8 @@
-<h1 class="heading">Images</h1>
-<a class="upload" href="images/create">Upload Image</a>
+<div class="head flex row">
+    <h1 class="heading">Images</h1>
+    <a class="upload" href="images/create">Upload Image</a>
+</div>
+
 <div class="images">
 <?php foreach($data as $image){ ?> 
     <div class="image-block">

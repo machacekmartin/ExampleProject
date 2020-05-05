@@ -124,6 +124,7 @@ body {
   margin: 0 auto;
   min-height: calc(100vh - 128px); }
   #content .heading {
+    width: 100%;
     text-align: center;
     font-size: 35px;
     margin-bottom: 35px; }
@@ -198,10 +199,11 @@ body {
     #content .posts .post {
       position: relative;
       border: solid 3px #CCCCCC;
-      padding: 10px;
+      padding: 20px 10px;
       word-break: break-all;
-      height: 120px;
       overflow: hidden; }
+      #content .posts .post .link {
+        width: 100%; }
       #content .posts .post .head {
         justify-content: space-between;
         align-items: center; }
@@ -210,6 +212,19 @@ body {
         right: 0;
         top: 0;
         padding: 5px 10px; }
+      #content .posts .post .content {
+        max-height: 60px;
+        overflow-y: hidden;
+        position: relative; }
+        #content .posts .post .content:after {
+          content: '';
+          display: block;
+          position: absolute;
+          width: 100px;
+          height: 18px;
+          bottom: 0;
+          right: 0;
+          background-image: linear-gradient(90deg, transparent 0%, #FEFEFE 80%); }
   #content .post-form {
     max-width: 600px;
     width: 100%;
@@ -247,6 +262,19 @@ body {
   color: #EEEEEE;
   margin-top: 50px;
   text-align: center; }
+
+#fallback {
+  position: absolute;
+  left: 0;
+  top: 0;
+  height: 100vh;
+  width: 100%;
+  align-items: center;
+  justify-content: center;
+  background: #FEFEFE;
+  z-index: 100; }
+  #fallback .back:hover {
+    text-decoration: underline; }
 
 @media only screen and (max-width: 2160px) {
   #menu, #content {
@@ -300,5 +328,14 @@ body {
       grid-template-columns: 1fr; } }
 
 @media only screen and (max-width: 500px) {
+  #content .head {
+    justify-content: space-between;
+    margin-bottom: 10px; }
+  #content .heading {
+    width: auto;
+    text-align: left;
+    margin-bottom: 10px; }
+  #content .upload {
+    position: initial; }
   #content .images {
     grid-template-columns: 1fr; } }
