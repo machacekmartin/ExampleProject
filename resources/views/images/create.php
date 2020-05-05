@@ -10,8 +10,6 @@
     </div>
     <input type="hidden" name="action" value="images">
 </form>
-<a href="/images">Back</a>
-
 
 <script>
 var previewUpload = function(event) {

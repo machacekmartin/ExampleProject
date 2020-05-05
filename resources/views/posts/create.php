@@ -5,4 +5,3 @@
     <input type="submit" value="Create new post" class="button">
     <input type="hidden" name="action" value="posts">
 </form>
-<a href="/posts">Back</a>
