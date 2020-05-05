@@ -6,7 +6,6 @@
     </div>
     <div class="result flex row">
         <input type="submit" value="Upload" class="button">
-        
         <img id="preview" class="preview">
     </div>
     <input type="hidden" name="action" value="images">

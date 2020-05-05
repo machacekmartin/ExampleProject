@@ -25,10 +25,9 @@ body{
             letter-spacing: 1px;
             .link{
                 text-transform: uppercase;
-
                 border-bottom: solid 1px transparent;
                 padding: 2px 0;
-                transition: border-color .1s;
+                transition: border-color .15s;
                 &:hover{
                     border-color: $dark-gray;
                 }
@@ -72,7 +71,7 @@ body{
                 width: 100%;
                 opacity: 0;
                 background: rgba(0,0,0,0.7);
-                transition: opacity 0.1s;
+                transition: opacity .15s;
                 justify-content: flex-end; 
                 &:hover{
                     opacity: 1;
@@ -129,17 +128,27 @@ body{
     }
 
     .posts{
-        max-width: 1200px;
-        margin: 0 auto;
-        width: 100%;
         display: grid;
         grid-template-columns: 1fr 1fr;
         column-gap: 10px;
         row-gap: 10px;
         .post{
-            border: solid 1px $gray;
+            position: relative;
+            border: solid 3px $gray;
             padding: 10px;
             word-break: break-all;
+            height: 120px;
+            overflow: hidden;
+            .head{
+                justify-content: space-between;
+                align-items: center;
+            }
+            .delete{
+                position: absolute;
+                right: 0;
+                top: 0;
+                padding: 5px 10px;
+            }
         }
     }
     .post-form{

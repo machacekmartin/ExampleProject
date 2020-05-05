@@ -10,7 +10,7 @@ class Model{
      * @return array    array of objects.
      */
     public static function all($table){
-        return Database::query("SELECT * FROM $table")->fetchAll(PDO::FETCH_CLASS);
+        return Database::query("SELECT * FROM $table ORDER BY date DESC")->fetchAll(PDO::FETCH_CLASS );
     }
     
     /**

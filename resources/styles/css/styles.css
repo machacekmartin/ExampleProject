@@ -111,7 +111,7 @@ body {
         text-transform: uppercase;
         border-bottom: solid 1px transparent;
         padding: 2px 0;
-        transition: border-color 0.1s; }
+        transition: border-color 0.15s; }
         #menu .items .item .link:hover {
           border-color: #333333; }
   #menu .switch {
@@ -147,7 +147,7 @@ body {
         width: 100%;
         opacity: 0;
         background: rgba(0, 0, 0, 0.7);
-        transition: opacity 0.1s;
+        transition: opacity 0.15s;
         justify-content: flex-end; }
         #content .images .image-block .info:hover {
           opacity: 1; }
@@ -191,17 +191,25 @@ body {
         height: 150px;
         object-fit: cover; }
   #content .posts {
-    max-width: 1200px;
-    margin: 0 auto;
-    width: 100%;
     display: grid;
     grid-template-columns: 1fr 1fr;
     column-gap: 10px;
     row-gap: 10px; }
     #content .posts .post {
-      border: solid 1px #CCCCCC;
+      position: relative;
+      border: solid 3px #CCCCCC;
       padding: 10px;
-      word-break: break-all; }
+      word-break: break-all;
+      height: 120px;
+      overflow: hidden; }
+      #content .posts .post .head {
+        justify-content: space-between;
+        align-items: center; }
+      #content .posts .post .delete {
+        position: absolute;
+        right: 0;
+        top: 0;
+        padding: 5px 10px; }
   #content .post-form {
     max-width: 600px;
     width: 100%;
