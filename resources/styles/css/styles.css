@@ -229,7 +229,8 @@ body {
             height: 18px;
             bottom: 0;
             right: 0;
-            background: linear-gradient(90deg, transparent 0%, #FEFEFE 80%); }
+            background-image: linear-gradient(to right, rgba(255, 255, 255, 0) 0%, #FEFEFE 80%);
+            background-image: -webkit-linear-gradient(to right, rgba(255, 255, 255, 0) 0%, #FEFEFE 80%); }
       #content .posts .post .delete {
         position: absolute;
         right: 0;
