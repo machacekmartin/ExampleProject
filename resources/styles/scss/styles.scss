@@ -110,44 +110,11 @@ body{
             }
         }
     }
-    .create-form{
-        margin: 0 auto;
-        width: 100%;
-        max-width: 600px;
-        .image{
-            width: 100%;
-            height: 250px;
-            border: solid 2px $gray;
-            position: relative;
-            background: url('/resources/images/static/upload.png');
-            background-size: contain;
-            background-position: center;
-            background-repeat: no-repeat;
-            &:hover{
-                border: solid 5px $dark-gray;
-            }
-            .file{
-                width: 100%;
-                height: 100%;
-                opacity: 0;
-                cursor: pointer;
-            }
-        }
-        .result{
-            width: 100%;
-            margin-top: 20px;
-            justify-content: space-between;
-            .preview{
-                width: 150px;
-                height: 150px;
-                object-fit: cover;
-            }
-        }
-    }
     .posts{
         grid-template-columns: 1fr 1fr;
         column-gap: 10px;
         row-gap: 15px;
+        position: relative;
         .post{
             position: relative;
             border: solid 1px $gray;
@@ -190,6 +157,41 @@ body{
             } 
         }
     }
+    .create-form{
+        margin: 0 auto;
+        width: 100%;
+        max-width: 600px;
+        .image{
+            width: 100%;
+            height: 250px;
+            border: solid 2px $gray;
+            position: relative;
+            background: url('/resources/images/static/upload.png');
+            background-size: contain;
+            background-position: center;
+            background-repeat: no-repeat;
+            &:hover{
+                border: solid 5px $dark-gray;
+            }
+            .file{
+                width: 100%;
+                height: 100%;
+                opacity: 0;
+                cursor: pointer;
+            }
+        }
+        .result{
+            width: 100%;
+            margin-top: 20px;
+            justify-content: space-between;
+            .preview{
+                width: 150px;
+                height: 150px;
+                object-fit: cover;
+            }
+        }
+    }
+    
     .show{
         max-width: 1000px;
         width: 100%;

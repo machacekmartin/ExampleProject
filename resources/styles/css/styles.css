@@ -198,38 +198,11 @@ body {
         width: 100%;
         height: 100%;
         object-fit: cover; }
-  #content .create-form {
-    margin: 0 auto;
-    width: 100%;
-    max-width: 600px; }
-    #content .create-form .image {
-      width: 100%;
-      height: 250px;
-      border: solid 2px #CCCCCC;
-      position: relative;
-      background: url('/resources/images/static/upload.png');
-      background-size: contain;
-      background-position: center;
-      background-repeat: no-repeat; }
-      #content .create-form .image:hover {
-        border: solid 5px #333333; }
-      #content .create-form .image .file {
-        width: 100%;
-        height: 100%;
-        opacity: 0;
-        cursor: pointer; }
-    #content .create-form .result {
-      width: 100%;
-      margin-top: 20px;
-      justify-content: space-between; }
-      #content .create-form .result .preview {
-        width: 150px;
-        height: 150px;
-        object-fit: cover; }
   #content .posts {
     grid-template-columns: 1fr 1fr;
     column-gap: 10px;
-    row-gap: 15px; }
+    row-gap: 15px;
+    position: relative; }
     #content .posts .post {
       position: relative;
       border: solid 1px #CCCCCC;
@@ -263,6 +236,34 @@ body {
         right: 0;
         top: 0;
         padding: 5px 10px; }
+  #content .create-form {
+    margin: 0 auto;
+    width: 100%;
+    max-width: 600px; }
+    #content .create-form .image {
+      width: 100%;
+      height: 250px;
+      border: solid 2px #CCCCCC;
+      position: relative;
+      background: url('/resources/images/static/upload.png');
+      background-size: contain;
+      background-position: center;
+      background-repeat: no-repeat; }
+      #content .create-form .image:hover {
+        border: solid 5px #333333; }
+      #content .create-form .image .file {
+        width: 100%;
+        height: 100%;
+        opacity: 0;
+        cursor: pointer; }
+    #content .create-form .result {
+      width: 100%;
+      margin-top: 20px;
+      justify-content: space-between; }
+      #content .create-form .result .preview {
+        width: 150px;
+        height: 150px;
+        object-fit: cover; }
   #content .show {
     max-width: 1000px;
     width: 100%;
