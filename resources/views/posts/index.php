@@ -1,7 +1,7 @@
 <div class="head flex row">
     <h1 class="heading">Posts</h1>
     <?php if(!empty($data)){ ?>
-        <a class="upload" href="posts/create">Create new post</a>
+        <a class="upload" href="posts/create">+ Create new post</a>
     <?php } ?>
 </div>
 <div class="posts grid">

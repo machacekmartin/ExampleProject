@@ -1,7 +1,7 @@
 <div class="head flex row">
     <h1 class="heading">Images</h1>
     <?php if(!empty($data)){ ?>
-        <a class="upload" href="images/create">Upload new image</a>
+        <a class="upload" href="images/create">+ Upload new image</a>
     <?php } ?>
 </div>
 
