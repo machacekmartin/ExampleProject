@@ -21,7 +21,6 @@
 5. Open localhost in your browser
 
 #### Todo
-1. Authentication + users
-2. Cross-site scripting and js/html injection
-3. UI
-4. Final refactor
+1. Cross-site scripting and js/html injection
+2. Authentication + users
+3. Final refactor
