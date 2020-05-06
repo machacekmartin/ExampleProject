@@ -1,0 +1,94 @@
+/////////////// PRESETS \\\\\\\\\\\\\\\
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+ul{
+    list-style-type: none;
+}
+a{
+    text-decoration: none;
+    color: inherit;
+}
+img{
+    display: none;
+}
+img[src]{
+   display: block;
+}
+button, textarea, input, select, a{
+    -webkit-tap-highlight-color: transparent;
+    -webkit-appearance: none;
+}
+input, textarea{
+    border-radius: 0;
+    outline: none;
+    border: none;
+    font-family: 'Signika';
+}
+textarea{
+    font-weight: 100;
+    max-width: 600px;
+}
+.transition{
+    transition: .15s;
+}
+.button{
+    padding: 12px 50px;
+    height: 100%;
+    border: solid 2px $gray;
+    background: none;
+    cursor: pointer;
+    font-weight: 500;
+    font-size: 16px;
+    letter-spacing: .5px;
+    &:hover{
+        background: $dark-gray;
+        color: $light-gray;
+        border-color: transparent;
+    }
+}
+.input-text{
+    padding: 10px;
+    max-width: 600px;
+    width: 100%;
+    font-size: 20px;
+    background: $light-gray;
+    border-left: solid 0px $dark-gray;
+    margin-bottom: 20px; 
+    &:focus{
+        border-left-width: 5px;
+    }
+}
+.empty{
+    padding: 20px 0;
+    border: solid 2px $gray;
+    position: absolute;
+    left: 0;
+    right: 0;
+    margin: 50px auto;
+    max-width: 300px;
+    width: 100%;
+    text-align: center;
+    .img{
+        width: 50%;
+        margin: 0 auto;
+    }
+    &:hover{
+        border-width: 5px;
+        border-color: $dark-gray;
+    }
+}
+.grid{
+    display: grid;
+}
+.flex{
+    display: flex;
+}
+.row{
+    flex-flow: row;
+}
+.column{
+    flex-flow: column;
+}
