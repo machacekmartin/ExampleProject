@@ -54,7 +54,7 @@ textarea{
     max-width: 600px;
     width: 100%;
     font-size: 20px;
-    background: #eee;
+    background: $light-gray;
     border-left: solid 0px $dark-gray;
     margin-bottom: 20px; 
     &:focus{
