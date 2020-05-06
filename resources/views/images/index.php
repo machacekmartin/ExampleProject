@@ -5,10 +5,10 @@
     <?php } ?>
 </div>
 
-<div class="images">
+<div class="images grid">
     <?php 
         if (empty($data)){ ?>
-        <a class="empty flex column" href="images/create">
+        <a class="empty flex column transition" href="images/create">
             <h3>Nothing here huh..?</h3> 
             <img src="<?= IMAGES ?>static/add.png" alt="" class="img">
             
@@ -17,7 +17,7 @@
 <?php foreach($data as $image){ ?> 
     <div class="image-block">
         <a class="delete" href="images/destroy/<?= $image->id ?>">x</a> 
-        <a class="info flex column" href="images/show/<?= $image->id ?>">
+        <a class="info flex column transition" href="images/show/<?= $image->id ?>">
             <p class="date"><?= $image->date ?></p>
             <p class="header"><?= $image->header ?></p>
          </a>

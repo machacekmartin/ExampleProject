@@ -30,15 +30,15 @@ a {
   text-decoration: none;
   color: inherit; }
 
-button, textarea, input, select, a {
-  -webkit-tap-highlight-color: transparent;
-  -webkit-appearance: none; }
-
 img {
   display: none; }
 
 img[src] {
   display: block; }
+
+button, textarea, input, select, a {
+  -webkit-tap-highlight-color: transparent;
+  -webkit-appearance: none; }
 
 input, textarea {
   border-radius: 0;
@@ -50,17 +50,19 @@ textarea {
   font-weight: 100;
   max-width: 600px; }
 
-input.button {
+.transition {
+  transition: 0.15s; }
+
+.button {
   padding: 12px 50px;
   height: 100%;
   border: solid 2px #CCCCCC;
   background: none;
   cursor: pointer;
-  transition: 0.15s;
   font-weight: 500;
   font-size: 16px;
   letter-spacing: 0.5px; }
-  input.button:hover {
+  .button:hover {
     background: #333333;
     color: #EEEEEE;
     border-color: transparent; }
@@ -72,10 +74,12 @@ input.button {
   font-size: 20px;
   background: #eee;
   border-left: solid 0px #333333;
-  transition: border 0.15s;
   margin-bottom: 20px; }
   .input-text:focus {
     border-left-width: 5px; }
+
+.grid {
+  display: grid; }
 
 .flex {
   display: flex; }
@@ -95,8 +99,7 @@ input.button {
   margin: 50px auto;
   max-width: 300px;
   width: 100%;
-  text-align: center;
-  transition: 0.15s; }
+  text-align: center; }
   .empty .img {
     width: 50%;
     margin: 0 auto; }
@@ -110,7 +113,6 @@ body {
   font-family: 'Signika'; }
 
 #menu {
-  width: 100%;
   max-width: 2160px;
   margin: 0 auto;
   background: #FEFEFE;
@@ -118,8 +120,7 @@ body {
   justify-content: space-between;
   align-items: center; }
   #menu .login {
-    text-align: right;
-    width: 50px; }
+    text-align: right; }
     #menu .items .item {
       margin: 0 30px;
       font-weight: 600;
@@ -128,8 +129,7 @@ body {
       #menu .items .item .link {
         text-transform: uppercase;
         border-bottom: solid 1px transparent;
-        padding: 2px 0;
-        transition: border-color 0.15s; }
+        padding: 2px 0; }
         #menu .items .item .link:hover {
           border-color: #333333; }
   #menu .right {
@@ -166,8 +166,6 @@ body {
     position: absolute;
     margin-top: 15px; }
   #content .images {
-    flex-wrap: wrap;
-    display: grid;
     grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
     column-gap: 10px;
     row-gap: 10px;
@@ -183,7 +181,6 @@ body {
         width: 100%;
         opacity: 0;
         background: rgba(0, 0, 0, 0.7);
-        transition: opacity 0.15s;
         justify-content: flex-end; }
         #content .images .image-block .info:hover {
           opacity: 1; }
@@ -197,11 +194,11 @@ body {
         width: 100%;
         height: 100%;
         object-fit: cover; }
-  #content .image-form {
+  #content .create-form {
     margin: 0 auto;
     width: 100%;
     max-width: 600px; }
-    #content .image-form .image {
+    #content .create-form .image {
       width: 100%;
       height: 250px;
       border: solid 2px #CCCCCC;
@@ -209,33 +206,30 @@ body {
       background: url('/resources/images/static/upload.png');
       background-size: contain;
       background-position: center;
-      background-repeat: no-repeat;
-      transition: 0.15s; }
-      #content .image-form .image:hover {
+      background-repeat: no-repeat; }
+      #content .create-form .image:hover {
         border: solid 5px #333333; }
-      #content .image-form .image .file {
+      #content .create-form .image .file {
         width: 100%;
         height: 100%;
         opacity: 0;
         cursor: pointer; }
-    #content .image-form .result {
+    #content .create-form .result {
       width: 100%;
       margin-top: 20px;
       justify-content: space-between; }
-      #content .image-form .result .preview {
+      #content .create-form .result .preview {
         width: 150px;
         height: 150px;
         object-fit: cover; }
   #content .posts {
-    display: grid;
     grid-template-columns: 1fr 1fr;
     column-gap: 10px;
     row-gap: 15px; }
     #content .posts .post {
       position: relative;
       border: solid 1px #CCCCCC;
-      word-break: break-all;
-      transition: 0.15s; }
+      word-break: break-all; }
       #content .posts .post:hover {
         transform: translateY(-5px);
         box-shadow: 0 7px 10px -10px #333333; }
@@ -265,10 +259,6 @@ body {
         right: 0;
         top: 0;
         padding: 5px 10px; }
-  #content .post-form {
-    max-width: 600px;
-    width: 100%;
-    margin: 0 auto; }
   #content .show {
     max-width: 1000px;
     width: 100%;
@@ -354,7 +344,6 @@ body {
     align-items: center;
     justify-content: center;
     background: #FEFEFE;
-    transition: 0.5s;
     overflow: hidden;
     z-index: 10;
     padding-bottom: 150px;

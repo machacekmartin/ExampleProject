@@ -6,7 +6,6 @@ body{
     font-family: 'Signika';
 }
 #menu{
-    width: 100%;
     max-width: 2160px;
     margin: 0 auto;
     background: $bright-gray;
@@ -15,7 +14,6 @@ body{
     align-items: center;
     .login{
         text-align:right;
-        width: 50px;
     }
     .items{
         .item{
@@ -27,7 +25,6 @@ body{
                 text-transform: uppercase;
                 border-bottom: solid 1px transparent;
                 padding: 2px 0;
-                transition: border-color .15s;
                 &:hover{
                     border-color: $dark-gray;
                 }
@@ -56,7 +53,6 @@ body{
     text-align: center;
     max-width: 600px;
     line-height: 25px;
-
 }
 
 #content{
@@ -76,8 +72,6 @@ body{
         margin-top: 15px;
     }
     .images{
-        flex-wrap: wrap;
-        display: grid;
         grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
         column-gap: 10px;
         row-gap: 10px;
@@ -93,7 +87,6 @@ body{
                 width: 100%;
                 opacity: 0;
                 background: rgba(0,0,0,0.7);
-                transition: opacity .15s;
                 justify-content: flex-end; 
                 &:hover{
                     opacity: 1;
@@ -113,7 +106,7 @@ body{
             }
         }
     }
-    .image-form{
+    .create-form{
         margin: 0 auto;
         width: 100%;
         max-width: 600px;
@@ -126,7 +119,6 @@ body{
             background-size: contain;
             background-position: center;
             background-repeat: no-repeat;
-            transition: 0.15s;
             &:hover{
                 border: solid 5px $dark-gray;
             }
@@ -148,9 +140,7 @@ body{
             }
         }
     }
-
     .posts{
-        display: grid;
         grid-template-columns: 1fr 1fr;
         column-gap: 10px;
         row-gap: 15px;
@@ -158,7 +148,6 @@ body{
             position: relative;
             border: solid 1px $gray;
             word-break: break-all;
-            transition: .15s;
             &:hover{
                 transform: translateY(-5px);
                 box-shadow: 0 7px 10px -10px $dark-gray;
@@ -197,12 +186,6 @@ body{
             } 
         }
     }
-    .post-form{
-        max-width: 600px;
-        width: 100%;
-        margin: 0 auto;
-    }
-
     .show{
         max-width: 1000px;
         width: 100%;
@@ -306,7 +289,6 @@ body{
     #menu{
         .switch{
             display: block;
-
         }
         .items{
             position: fixed;
@@ -318,7 +300,6 @@ body{
             align-items: center;
             justify-content: center;
             background: $bright-gray;
-            transition: .5s;
             overflow: hidden;
             z-index: 10;
             padding-bottom: 150px;

@@ -11,15 +11,15 @@ a{
     text-decoration: none;
     color: inherit;
 }
-button, textarea, input, select, a{
-    -webkit-tap-highlight-color: transparent;
-    -webkit-appearance: none;
-}
 img{
     display: none;
 }
 img[src]{
    display: block;
+}
+button, textarea, input, select, a{
+    -webkit-tap-highlight-color: transparent;
+    -webkit-appearance: none;
 }
 input, textarea{
     border-radius: 0;
@@ -31,13 +31,15 @@ textarea{
     font-weight: 100;
     max-width: 600px;
 }
-input.button{
+.transition{
+    transition: .15s;
+}
+.button{
     padding: 12px 50px;
     height: 100%;
     border: solid 2px $gray;
     background: none;
     cursor: pointer;
-    transition: .15s;
     font-weight: 500;
     font-size: 16px;
     letter-spacing: .5px;
@@ -54,11 +56,13 @@ input.button{
     font-size: 20px;
     background: #eee;
     border-left: solid 0px $dark-gray;
-    transition: border .15s;
     margin-bottom: 20px; 
     &:focus{
         border-left-width: 5px;
     }
+}
+.grid{
+    display: grid;
 }
 .flex{
     display: flex;
@@ -79,7 +83,6 @@ input.button{
     max-width: 300px;
     width: 100%;
     text-align: center;
-    transition: .15s;
     .img{
         width: 50%;
         margin: 0 auto;

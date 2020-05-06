@@ -18,15 +18,15 @@
                 <h4>EXAMPLE</h4>
             </a>
         </div>
-        <ul class="items flex row">
+        <ul class="items flex row transition">
             <li class="item">
-                <a href="/posts" class="link">Posts</a>
+                <a href="/posts" class="link transition">Posts</a>
             </li>
             <li class="item">
-                <a href="/images" class="link">Images</a>
+                <a href="/images" class="link transition">Images</a>
             </li>
             <li class="item">
-                <a href="" class="link"><s>Account</s></a>
+                <a href="" class="link transition"><s>Account</s></a>
             </li>
         </ul>
         <div class="right flex row">
