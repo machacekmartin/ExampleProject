@@ -1,15 +1,24 @@
 <div class="head flex row">
     <h1 class="heading">Posts</h1>
-    <a href="posts/create" class="upload">Create new post</a>
+    <?php if(!empty($data)){ ?>
+        <a class="upload" href="posts/create">Create new post</a>
+    <?php } ?>
 </div>
 <div class="posts">
+<?php 
+    if (empty($data)){ ?>
+    <a class="empty flex column" href="posts/create">
+        <h3>Nothing here huh..?</h3> 
+        <img src="<?= IMAGES ?>static/add.png" alt="" class="img">    
+    </a>   
+    <?php } ?>
 <?php foreach($data as $post){ ?> 
     <div class="post flex row">
         <a href="posts/show/<?= $post->id ?>" class="link">
             <div class="head flex row">
                 <h3><?= $post->header ?></h3> 
             </div> 
-            <p><?= $post->date ?></p>    
+            <p class="date"><?= date_format(date_create($post->date), "d/m/Y | H:i" )?></p>    
             <p class="content"><?= $post->content ?></p> 
         </a> 
         <a href="posts/destroy/<?= $post->id ?>" class="delete">X</a>  

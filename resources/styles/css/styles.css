@@ -85,6 +85,24 @@ input.button {
 
 .column {
   flex-flow: column; }
+
+.empty {
+  padding: 20px 0;
+  border: solid 2px #CCCCCC;
+  position: absolute;
+  left: 0;
+  right: 0;
+  margin: 50px auto;
+  max-width: 300px;
+  width: 100%;
+  text-align: center;
+  transition: 0.15s; }
+  .empty .img {
+    width: 50%;
+    margin: 0 auto; }
+  .empty:hover {
+    border-width: 5px;
+    border-color: #333333; }
 body {
   background: #FEFEFE;
   color: #333333;
@@ -117,6 +135,13 @@ body {
   #menu .switch {
     display: none; }
 
+.home {
+  margin: 0 auto;
+  margin-top: 150px;
+  text-align: center;
+  max-width: 600px;
+  line-height: 25px; }
+
 #content {
   margin-top: 100px;
   padding: 30px 100px;
@@ -136,7 +161,8 @@ body {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
     column-gap: 10px;
-    row-gap: 10px; }
+    row-gap: 10px;
+    position: relative; }
     #content .images .image-block {
       position: relative;
       height: 300px;
@@ -171,7 +197,7 @@ body {
       height: 250px;
       border: solid 2px #CCCCCC;
       position: relative;
-      background: url('/resources/images/static/add.png');
+      background: url('/resources/images/static/upload.png');
       background-size: contain;
       background-position: center;
       background-repeat: no-repeat;
@@ -195,64 +221,78 @@ body {
     display: grid;
     grid-template-columns: 1fr 1fr;
     column-gap: 10px;
-    row-gap: 10px; }
+    row-gap: 15px; }
     #content .posts .post {
       position: relative;
-      border: solid 3px #CCCCCC;
-      padding: 20px 10px;
+      border: solid 1px #CCCCCC;
       word-break: break-all;
-      overflow: hidden; }
+      transition: 0.15s; }
+      #content .posts .post:hover {
+        transform: translateY(-5px);
+        box-shadow: 0 7px 10px -10px #333333; }
       #content .posts .post .link {
+        padding: 20px 10px;
         width: 100%; }
-      #content .posts .post .head {
-        justify-content: space-between;
-        align-items: center; }
+        #content .posts .post .link .head {
+          justify-content: space-between;
+          align-items: center; }
+        #content .posts .post .link .date {
+          margin: 5px 0; }
+        #content .posts .post .link .content {
+          max-height: 60px;
+          overflow-y: hidden;
+          position: relative; }
+          #content .posts .post .link .content:after {
+            content: '';
+            display: block;
+            position: absolute;
+            width: 100px;
+            height: 18px;
+            bottom: 0;
+            right: 0;
+            background: linear-gradient(90deg, transparent 0%, #FEFEFE 80%); }
       #content .posts .post .delete {
         position: absolute;
         right: 0;
         top: 0;
         padding: 5px 10px; }
-      #content .posts .post .content {
-        max-height: 60px;
-        overflow-y: hidden;
-        position: relative; }
-        #content .posts .post .content:after {
-          content: '';
-          display: block;
-          position: absolute;
-          width: 100px;
-          height: 18px;
-          bottom: 0;
-          right: 0;
-          background-image: linear-gradient(90deg, transparent 0%, #FEFEFE 80%); }
   #content .post-form {
     max-width: 600px;
     width: 100%;
     margin: 0 auto; }
-  #content .image-page {
+  #content .show {
     max-width: 1000px;
     width: 100%;
     justify-content: center;
     margin: 0 auto; }
-    #content .image-page .header {
+    #content .show .header {
       justify-content: space-between;
       align-items: center;
       margin-bottom: 5px;
       flex-wrap: wrap; }
-      #content .image-page .header .title {
+      #content .show .header .title {
         font-size: 30px;
         font-weight: 600;
         word-break: break-all;
         line-height: 25px; }
-      #content .image-page .header .date {
+      #content .show .header .date {
         font-weight: 100;
         color: #333333;
         font-size: 20px;
         text-align: right;
         margin: 5px 0; }
-    #content .image-page .image {
+    #content .show .content {
+      word-break: break-all;
+      margin-top: 15px;
+      text-align: justify; }
+    #content .show .image {
       width: 100%;
       margin: 0 auto; }
+    #content .show .responds {
+      border-top: solid 1px #CCCCCC;
+      margin-top: 50px; }
+  #content .show.post-page {
+    max-width: 700px; }
 
 #footer {
   bottom: 0;

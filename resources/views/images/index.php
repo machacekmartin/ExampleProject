@@ -1,9 +1,19 @@
 <div class="head flex row">
     <h1 class="heading">Images</h1>
-    <a class="upload" href="images/create">Upload Image</a>
+    <?php if(!empty($data)){ ?>
+        <a class="upload" href="images/create">Upload new image</a>
+    <?php } ?>
 </div>
 
 <div class="images">
+    <?php 
+        if (empty($data)){ ?>
+        <a class="empty flex column" href="images/create">
+            <h3>Nothing here huh..?</h3> 
+            <img src="<?= IMAGES ?>static/add.png" alt="" class="img">
+            
+        </a>   
+        <?php } ?>
 <?php foreach($data as $image){ ?> 
     <div class="image-block">
         <a class="delete" href="images/destroy/<?= $image->id ?>">x</a> 

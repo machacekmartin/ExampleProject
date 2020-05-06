@@ -1,12 +1,8 @@
 <?php
 
-// INDEX
-Route::get('', function(){
-    echo "INDEX!";
-});
-Route::get('home', function(){
-    echo "INDEX!";
-});
+// INDEX/HOME
+Route::get('', 'HomeController::index');
+Route::get('home', 'HomeController::index');
 
 // IMAGES
 Route::get('images', 'ImageController::index');

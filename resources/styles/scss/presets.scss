@@ -69,3 +69,23 @@ input.button{
 .column{
     flex-flow: column;
 }
+.empty{
+    padding: 20px 0;
+    border: solid 2px $gray;
+    position: absolute;
+    left: 0;
+    right: 0;
+    margin: 50px auto;
+    max-width: 300px;
+    width: 100%;
+    text-align: center;
+    transition: .15s;
+    .img{
+        width: 50%;
+        margin: 0 auto;
+    }
+    &:hover{
+        border-width: 5px;
+        border-color: $dark-gray;
+    }
+}
