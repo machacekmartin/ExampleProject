@@ -33,7 +33,7 @@
             <div class="login">
                 <a href=""><s>Login</s></a> 
             </div>
-            <span class="switch">M</span>
+            <img src="<?= IMAGES ?>static/menu.png" class="switch" >
         </div>
     </header>
     <section id="content" class="flex column">

@@ -132,8 +132,17 @@ body {
         transition: border-color 0.15s; }
         #menu .items .item .link:hover {
           border-color: #333333; }
+  #menu .right {
+    align-items: center; }
   #menu .switch {
-    display: none; }
+    display: none;
+    height: 20px;
+    margin-left: 50px;
+    padding: 0 0px;
+    cursor: pointer;
+    border: solid 1.5px transparent; }
+    #menu .switch.open {
+      border-color: #333333; }
 
 .home {
   margin: 0 auto;
@@ -334,15 +343,13 @@ body {
 
 @media only screen and (max-width: 800px) {
   #menu .switch {
-    display: block;
-    margin-left: 25px;
-    padding-left: 25px; }
+    display: block; }
   #menu .items {
     position: fixed;
     width: 0;
     right: 0;
-    top: 78px;
-    height: calc(100% - 78px);
+    top: 80px;
+    height: calc(100% - 80px);
     flex-flow: column;
     align-items: center;
     justify-content: center;

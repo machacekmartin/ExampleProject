@@ -34,8 +34,19 @@ body{
             }
         }
     }
+    .right{
+        align-items: center;
+    }
     .switch{
         display: none;
+        height: 20px;
+        margin-left: 50px;
+        padding: 0 0px;
+        cursor: pointer;
+        border: solid 1.5px transparent;
+        &.open{
+            border-color: $dark-gray;
+        }
     }
 }
 
@@ -45,7 +56,7 @@ body{
     text-align: center;
     max-width: 600px;
     line-height: 25px;
-    
+
 }
 
 #content{
@@ -295,15 +306,14 @@ body{
     #menu{
         .switch{
             display: block;
-            margin-left: 25px;
-            padding-left: 25px;
+
         }
         .items{
             position: fixed;
             width: 0;
             right: 0;
-            top: 78px;
-            height: calc(100% - 78px);
+            top: 80px;
+            height: calc(100% - 80px);
             flex-flow: column;
             align-items: center;
             justify-content: center;
