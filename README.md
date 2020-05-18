@@ -1,7 +1,7 @@
 # Example Project
 
-- Example web app, that allows publishing of posts and images (separate)
-- ONLY FOR DEMONSTRATION PURPOSES - thus only meant to be used on a localhost setup
+- Example MVW web app, that allows publishing of posts and images (separate)
+- only meant to be used on a localhost setup
 - Uses variation of MVC, where the View doesnt communicate directly with Model, but everything is provided via Controllers.
 
 ## Code flow
