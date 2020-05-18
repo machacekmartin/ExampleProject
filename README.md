@@ -1,4 +1,4 @@
-# Example Project
+# Model View Whatever - Pure PHP OOP Web App
 
 - Example MVW web app, that allows publishing of posts and images (separate)
 - only meant to be used on a localhost setup
