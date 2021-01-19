@@ -19,8 +19,3 @@
 3. Credentials of your database have to be same as in [this file](https://github.com/machacekmartin/ExampleProject/blob/master/config/database.php) 
 4. Import [preparelocaldb.sql](https://github.com/machacekmartin/ExampleProject/blob/master/preparelocaldb.sql) into your database (e.g. using phpmyadmin)
 5. Open localhost in your browser
-
-#### Todo
-1. Cross-site scripting and js/html injection
-2. Authentication + users
-3. Final refactor
